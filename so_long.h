@@ -1,25 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   matrix_reader.c                                    :+:      :+:    :+:   */
+/*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/03 17:43:03 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/03 18:00:00 by ecaruso          ###   ########.fr       */
+/*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
+/*   Updated: 2023/04/04 17:25:07 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void matrix_reader(void)
-{
-	int		x;
-	int		y;
-	char	**matrix;
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
-	x = 0;
-	y = 0;
-	while (matrix[x] != '\0' matrix[x][y] != '\0')
-	{
+#include <mlx.h>
 
-	}
-}
+int	main(void);
+
+#endif
