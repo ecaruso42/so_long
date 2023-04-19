@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:53:06 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/19 18:52:37 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/19 19:59:07 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ void	create_map(char *argv, t_game *game)
 	game->map.map_height = array_height(game->map.map_str, '\n') + 1;
 	game->map.map_array = ft_split(game->map.map_str, '\n');
 	game->map.map_width = ft_strlen(game->map.map_array[0]);
-	printf("%d\n", game->map.map_width);
-	printf("%d\n", game->map.map_height);
-	printf("%s\n", game->map.map_str);
-	printf("%s", game->map.map_array[0]);
+	//printf("%d\n", game->map.map_width);
+	//printf("%d\n", game->map.map_height);
+	//printf("%s\n", game->map.map_str);
+	//printf("%s", game->map.map_array[0]);
 }
