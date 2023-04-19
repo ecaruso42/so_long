@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/19 16:58:03 by ecaruso          ###   ########.fr       */
+/*   Created: 2023/04/19 18:07:02 by ecaruso           #+#    #+#             */
+/*   Updated: 2023/04/19 18:31:55 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-#include <mlx.h>
 
-int	main(int argc, char **argv)
+int	array_height(char const *str, char c)
 {
-	t_game	game;
+	int	i;
+	int	counter;
 
-	if (argc == 2)
+	i = 0;
+	counter = 0;
+	while (str[i] != '\0')
 	{
-		create_map(argv[1], &game);
+		if (str[i] == c)
+			counter++;
+		i++;
 	}
-
-	// void	*mlx;
-	// void	*mlx_win;
-
-	// mlx = mlx_init();
-	// mlx_win = mlx_new_window(mlx, 2048, 1080, "Cosí lungo");
-	// mlx_loop(mlx);
+	return (counter);
 }
