@@ -5,41 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/04/03 14:39:43 by ecaruso           #+#    #+#              #
-#    Updated: 2023/04/19 19:51:31 by ecaruso          ###   ########.fr        #
+#    Created: 2023/03/06 18:47:24 by ecaruso           #+#    #+#              #
+#    Updated: 2023/03/17 21:49:48 by ecaruso          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = so_long
-LIBFT = libft/libft.a
-PRINTF = ft_printf/libftprintf.a
-SRC = \
-main.c \
-read_map.c \
-utils.c \
+NAME = libftprintf.a
+SRC = ft_printf.c \
+ft_printf_utils.c \
+ft_printf_utils_hex.c \
 
-OBJ = $(SRC:%.c=%.o)
+OBJ = ${SRC:.c=.o}
 FLAGS = -Wall -Wextra -Werror
 GCC = gcc -c
-
-%.o: %.c
-	$(CC) -Wall -Wextra -Werror -Imlx -c $< -o $@
-
 all : $(NAME)
 
-$(NAME): $(OBJ)
-	make -C libft all bonus
-	make -C ft_printf all
-	$(CC) $(OBJ) $(LIBFT) $(PRINTF) -Lmlx -lmlx -framework OpenGL -framework AppKit -o $(NAME)
+$(NAME) :
+		$(GCC) $(FLAGS) $(SRC) -I
+		ar rcs $(NAME) $(OBJ)
 
 clean :
-	make -C libft clean
-	make -C ft_printf clean
-	rm -f $(OBJ)
+		rm -f $(OBJ)
 
 fclean : clean
-	make -C libft fclean
-	make -C ft_printf fclean
-	rm -f $(NAME)
+		rm -f $(NAME)
 
 re : fclean all
+
