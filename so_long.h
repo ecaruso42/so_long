@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/19 18:35:50 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/20 19:37:16 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 
 # include <mlx.h>
 # include <fcntl.h>
-# include <stdio.h>
 # include "./libft/libft.h"
+# include "./ft_printf/ft_printf.h"
 
 typedef struct s_map
 {
@@ -36,5 +36,8 @@ typedef struct s_game
 
 void	create_map(char *argv, t_game *game);
 int		array_height(char const *str, char c);
+int		int_strlen(const char *str);
+void	check_errors(t_game *game);
+void	check_str_lenght(t_game *game);
 
 #endif
