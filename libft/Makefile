@@ -6,7 +6,7 @@
 #    By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/19 18:50:23 by ecaruso           #+#    #+#              #
-#    Updated: 2023/02/09 18:35:28 by ecaruso          ###   ########.fr        #
+#    Updated: 2023/04/24 15:02:16 by ecaruso          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC = \
 		./ft_toupper.c	\
 		./ft_tolower.c	\
 		./ft_strrchr.c	\
+		./ft_strcmp.c	\
 		./ft_strncmp.c	\
 		./ft_memchr.c	\
 		./ft_memcmp.c	\

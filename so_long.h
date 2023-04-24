@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/20 19:37:16 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/24 12:45:14 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,8 @@ int		array_height(char const *str, char c);
 int		int_strlen(const char *str);
 void	check_errors(t_game *game);
 void	check_str_lenght(t_game *game);
+void	check_up_n_bottom(char **map_array, int row);
+void	check_sides(char **map_array, int column, int height);
+void	check_ber_ext(char *str);
 
 #endif

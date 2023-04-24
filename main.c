@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/20 19:00:59 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/24 12:40:30 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,13 @@ int	main(int argc, char **argv)
 	{
 		ft_printf("ERROR:\nbruh pass me at least an argument :/\n");
 	}
-	if (argc > 2)
+	else if (argc > 2)
 	{
 		ft_printf("ERROR:\nno wait now the arguments are too many >.<\n");
 	}
-	if (argc == 2)
+	else if (argc == 2)
 	{
+		check_ber_ext(argv[1]);
 		create_map(argv[1], &game);
 	}
 	return (0);
