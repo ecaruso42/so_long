@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 18:07:02 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/20 19:36:42 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/24 17:37:22 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,20 @@ int	int_strlen(const char *str)
 		a++;
 	}
 	return (a);
+}
+
+int	str_countchar(char *str, int element)
+{
+	int	count;
+	int	i;
+
+	count = 0;
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == element)
+			count++;
+		i++;
+	}
+	return (count);
 }

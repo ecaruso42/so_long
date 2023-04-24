@@ -6,7 +6,7 @@
 #    By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 14:39:43 by ecaruso           #+#    #+#              #
-#    Updated: 2023/04/20 19:08:52 by ecaruso          ###   ########.fr        #
+#    Updated: 2023/04/24 16:10:55 by ecaruso          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ main.c \
 read_map.c \
 utils.c \
 check_errors.c \
-print_errors.c
+check_errors2.c
 
 OBJ = $(SRC:%.c=%.o)
 FLAGS = -Wall -Wextra -Werror

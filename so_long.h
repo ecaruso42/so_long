@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/24 12:45:14 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/24 17:35:21 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ typedef struct s_map
 	char	**map_array;
 	int		map_height;
 	int		map_width;
+	int		map_collectibles;
+	int		map_player;
+	int		map_exit;
+	int		map_enemies;
 }t_map;
 
 typedef struct s_game
@@ -42,5 +46,8 @@ void	check_str_lenght(t_game *game);
 void	check_up_n_bottom(char **map_array, int row);
 void	check_sides(char **map_array, int column, int height);
 void	check_ber_ext(char *str);
+void	check_missing_elements(t_game *game);
+int		str_countchar(char *str, int element);
+void	check_unallowed_elements(t_game *game);
 
 #endif
