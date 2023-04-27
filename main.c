@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/24 12:40:30 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/27 19:54:58 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int	main(int argc, char **argv)
 	{
 		check_ber_ext(argv[1]);
 		create_map(argv[1], &game);
+		ft_print_array(game.map.map_array);
+		create_window(&game);
+		make_graphics(&game);
+		scan_map(&game);
+		mlx_loop(game.graphics.mlx_pointer);
 	}
 	return (0);
 	// void	*mlx;

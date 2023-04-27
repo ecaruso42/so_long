@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/24 17:35:21 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/27 19:39:05 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,24 @@ typedef struct s_map
 	int		map_enemies;
 }t_map;
 
+typedef struct s_graphics
+{
+	void	*mlx_pointer;
+	void	*mlx_window;
+	int		size_tile;
+}t_graphics;
+
+typedef struct s_image
+{
+	void	*ground;
+	void	*wall;
+}t_image;
+
 typedef struct s_game
 {
-	t_map	map;
+	t_map		map;
+	t_graphics	graphics;
+	t_image		image;
 }t_game;
 
 void	create_map(char *argv, t_game *game);
@@ -49,5 +64,18 @@ void	check_ber_ext(char *str);
 void	check_missing_elements(t_game *game);
 int		str_countchar(char *str, int element);
 void	check_unallowed_elements(t_game *game);
-
+void	create_window(t_game *game);
+void	scan_map(t_game *game);
+void	make_graphics(t_game *game);
+void	put_wall_img(t_game *game, int y, int x);
+void	put_ground_img(t_game *game, int y, int x);
+void	ft_print_array(char **array_strings);
 #endif
+
+//void	*img;
+//img_pl = mlx_xpm_file_to_image(game->mlx, "image/player.xpm", 32, 32);
+//img_spazio =  mlx_xpm_file_to_image(game->mlx, "image/spazio.xpm", 32, 32);
+//if (map[x][y] == 'p')
+//	mlx_put_image_to_window(game->mlx, game->mlx_win, img_pl, int x, int y);
+//if (map[x][y] == '0')
+//	mlx_put_image_to_window(game->mlx, game->mlx_win, img_pl, int x, int y);

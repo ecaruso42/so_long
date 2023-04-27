@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:53:06 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/20 19:15:28 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/04/27 19:48:43 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,30 @@ void	create_map(char *argv, t_game *game)
 	check_errors(game);
 	free(game->map.map_str);
 	close(fd);
+}
+
+static void	draw_map(t_game *game, int y, int x)
+{
+	if (game->map.map_array[y][x] == '1')
+		put_wall_img(game, y, x);
+	else if (game->map.map_array[y][x] == '0')
+		put_ground_img(game, y, x);
+}
+
+void	scan_map(t_game *game)
+{
+	int	x;
+	int	y;
+
+	y = 0;
+	while (game->map.map_array[y])
+	{
+		x = 0;
+		while (game->map.map_array[y][x])
+		{
+			draw_map(game, y, x);
+			x++;
+		}
+		y++;
+	}
 }
