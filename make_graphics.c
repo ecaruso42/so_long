@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:38:29 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/27 19:56:53 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/02 17:21:38 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	create_window(t_game *game)
 {
 	game->graphics.mlx_pointer = mlx_init();
 	game->graphics.mlx_window = mlx_new_window(game->graphics.mlx_pointer,
-			(128 * game->map.map_width), (128 * game->map.map_height) + 128,
+			(64 * game->map.map_width), (64 * game->map.map_height) + 64,
 			"Cosí_lungo");
 }
 
