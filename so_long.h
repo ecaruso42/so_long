@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/27 19:39:05 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/02 21:39:51 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ typedef struct s_image
 {
 	void	*ground;
 	void	*wall;
+	void	*P;
 }t_image;
 
 typedef struct s_game
@@ -70,6 +71,7 @@ void	make_graphics(t_game *game);
 void	put_wall_img(t_game *game, int y, int x);
 void	put_ground_img(t_game *game, int y, int x);
 void	ft_print_array(char **array_strings);
+void	put_player_img(t_game *game, int y, int x);
 #endif
 
 //void	*img;
