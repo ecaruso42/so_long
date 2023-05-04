@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:38:29 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/02 21:44:24 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/04 18:18:52 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ static void	inizialize_tiles_part_one(t_game *game)
 	game->image.wall = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
 			"./images/wall.xpm", &game->graphics.size_tile,
 			&game->graphics.size_tile);
+	game->image.E = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
+			"./images/exit.xpm", &game->graphics.size_tile,
+			&game->graphics.size_tile);
 }
 
 static void	inizialize_tiles_part_two(t_game *game)
@@ -35,6 +38,13 @@ static void	inizialize_tiles_part_two(t_game *game)
 	game->image.P = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
 			"./images/P_look_R.xpm", &game->graphics.size_tile,
 			&game->graphics.size_tile);
+	game->image.N = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
+			"./images/N_look_L.xpm", &game->graphics.size_tile,
+			&game->graphics.size_tile);
+	game->image.C = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
+			"./images/collectable.xpm", &game->graphics.size_tile,
+			&game->graphics.size_tile);
+
 }
 
 void	make_graphics(t_game *game)

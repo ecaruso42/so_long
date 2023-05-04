@@ -6,7 +6,7 @@
 #    By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/03 14:39:43 by ecaruso           #+#    #+#              #
-#    Updated: 2023/04/27 19:40:37 by ecaruso          ###   ########.fr        #
+#    Updated: 2023/05/04 18:20:45 by ecaruso          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ check_errors.c \
 check_errors2.c \
 make_graphics.c \
 put_img.c \
+put_img2.c \
 print_array.c
 
 OBJ = $(SRC:%.c=%.o)
