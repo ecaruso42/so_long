@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:53:06 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/04 18:19:25 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/08 19:27:41 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,17 @@ void	scan_map(t_game *game)
 			x++;
 		}
 		y++;
+	}
+}
+
+void	free_map(t_game *game)
+{
+	int	i;
+
+	i = 0;
+	while (game->map.map_array[i])
+	{
+		free(game->map.map_array[i]);
+		i++;
 	}
 }
