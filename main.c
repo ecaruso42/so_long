@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/04/27 19:54:58 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/08 17:32:11 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	main(int argc, char **argv)
 		create_window(&game);
 		make_graphics(&game);
 		scan_map(&game);
+		mlx_key_hook(game.graphics.mlx_window, key_pressed, &game);
 		mlx_loop(game.graphics.mlx_pointer);
 	}
 	return (0);

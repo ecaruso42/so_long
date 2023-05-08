@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/04 18:20:30 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/08 17:32:37 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ typedef struct s_map
 	char	**map_array;
 	int		map_height;
 	int		map_width;
-	int		map_collectibles;
-	int		map_player;
-	int		map_exit;
-	int		map_enemies;
+	int		collectibles;
+	int		player;
+	int		exit;
+	int		enemies;
 }t_map;
 
 typedef struct s_graphics
@@ -40,6 +40,11 @@ typedef struct s_graphics
 	int		size_tile;
 }t_graphics;
 
+typedef struct s_pcoords
+{
+	int	x;
+	int	y;
+}t_pcoords;
 typedef struct s_image
 {
 	void	*ground;
@@ -55,6 +60,7 @@ typedef struct s_game
 	t_map		map;
 	t_graphics	graphics;
 	t_image		image;
+	t_pcoords	pcoords;
 }t_game;
 
 void	create_map(char *argv, t_game *game);
@@ -78,6 +84,7 @@ void	put_player_img(t_game *game, int y, int x);
 void	put_enemy_img(t_game *game, int y, int x);
 void	put_exit_img(t_game *game, int y, int x);
 void	put_C_img(t_game *game, int y, int x);
+int		key_pressed(int keycode, t_game *game);
 #endif
 
 //void	*img;
