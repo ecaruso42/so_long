@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/08 17:32:11 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/09 16:08:19 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,4 @@ int	main(int argc, char **argv)
 		mlx_loop(game.graphics.mlx_pointer);
 	}
 	return (0);
-	// void	*mlx;
-	// void	*mlx_win;
-
-	// mlx = mlx_init();
-	// mlx_win = mlx_new_window(mlx, 2048, 1080, "Cosí lungo");
-	// mlx_loop(mlx);
 }
