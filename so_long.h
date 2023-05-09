@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 16:00:26 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/09 18:51:06 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,12 +88,9 @@ void	put_c_img(t_game *game, int y, int x);
 int		key_pressed(int keycode, t_game *game);
 void	free_map(t_game *game);
 int		move_up(t_game *game);
+int		move_down(t_game *game);
+int		move_right(t_game *game);
+int		move_left(t_game *game);
+void	death(t_game *game);
+void	win(t_game *game);
 #endif
-
-//void	*img;
-//img_pl = mlx_xpm_file_to_image(game->mlx, "image/player.xpm", 32, 32);
-//img_spazio =  mlx_xpm_file_to_image(game->mlx, "image/spazio.xpm", 32, 32);
-//if (map[x][y] == 'p')
-//	mlx_put_image_to_window(game->mlx, game->mlx_win, img_pl, int x, int y);
-//if (map[x][y] == '0')
-//	mlx_put_image_to_window(game->mlx, game->mlx_win, img_pl, int x, int y);

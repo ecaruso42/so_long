@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/08 17:20:25 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 16:07:57 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/09 18:50:32 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,12 @@ int	key_pressed(int keycode, t_game *game)
 	}
 	if (keycode == 13 || keycode == 126)
 		game->map.moves += move_up(game);
+	if (keycode == 1 || keycode == 125)
+		game->map.moves += move_down(game);
+	if (keycode == 2 || keycode == 124)
+		game->map.moves += move_right(game);
+	if (keycode == 0 || keycode == 123)
+		game->map.moves += move_left(game);
 	scan_map(game);
 	return (0);
 }
