@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 18:51:06 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:21:21 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_map
 	int		exit;
 	int		enemies;
 	int		moves;
+	int		dir;
 }t_map;
 
 typedef struct s_graphics
@@ -93,4 +94,9 @@ int		move_right(t_game *game);
 int		move_left(t_game *game);
 void	death(t_game *game);
 void	win(t_game *game);
+void	stab(t_game *game);
+void	stab_r(t_game *game);
+void	stab_l(t_game *game);
+void	stab_d(t_game *game);
+void	stab_u(t_game *game);
 #endif

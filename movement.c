@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 21:32:51 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 18:57:30 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:10:44 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int	move_up(t_game *game)
 		game->image.p = mlx_xpm_file_to_image (game->graphics.mlx_pointer,
 				"./images/P_look_U.xpm", &game->map.map_width,
 				&game->map.map_height);
+		game->map.dir = 1;
 		return (1);
 	}
 	return (0);
@@ -59,6 +60,7 @@ int	move_down(t_game *game)
 		game->image.p = mlx_xpm_file_to_image (game->graphics.mlx_pointer,
 				"./images/P_look_D.xpm", &game->map.map_width,
 				&game->map.map_height);
+		game->map.dir = 2;
 		return (1);
 	}
 	return (0);
@@ -85,6 +87,7 @@ int	move_right(t_game *game)
 		game->image.p = mlx_xpm_file_to_image (game->graphics.mlx_pointer,
 				"./images/P_look_R.xpm", &game->map.map_width,
 				&game->map.map_height);
+		game->map.dir = 3;
 		return (1);
 	}
 	return (0);
@@ -111,6 +114,7 @@ int	move_left(t_game *game)
 		game->image.p = mlx_xpm_file_to_image (game->graphics.mlx_pointer,
 				"./images/P_look_L.xpm", &game->map.map_width,
 				&game->map.map_height);
+		game->map.dir = 4;
 		return (1);
 	}
 	return (0);
