@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/12 18:21:21 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:36:15 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ typedef struct s_image
 	void	*n;
 	void	*e;
 	void	*c;
+	void	*d;
 }t_image;
 
 typedef struct s_game
@@ -99,4 +100,5 @@ void	stab_r(t_game *game);
 void	stab_l(t_game *game);
 void	stab_d(t_game *game);
 void	stab_u(t_game *game);
+void	put_d_img(t_game *game, int y, int x);
 #endif

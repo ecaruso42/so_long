@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/02 21:32:51 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/12 18:10:44 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 19:55:53 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	move_up(t_game *game)
 {
-	if (game->map.map_array[game->pcoords.y - 1][game->pcoords.x] == '1')
+	if (game->map.map_array[game->pcoords.y - 1][game->pcoords.x] == '1' ||
+		game->map.map_array[game->pcoords.y - 1][game->pcoords.x] == 'D')
 		return (0);
 	else if (game->map.map_array[game->pcoords.y - 1][game->pcoords.x] == 'E'
 		&& game->map.collectibles != 0)
@@ -41,7 +42,8 @@ int	move_up(t_game *game)
 
 int	move_down(t_game *game)
 {
-	if (game->map.map_array[game->pcoords.y + 1][game->pcoords.x] == '1')
+	if (game->map.map_array[game->pcoords.y + 1][game->pcoords.x] == '1' ||
+		game->map.map_array[game->pcoords.y + 1][game->pcoords.x] == 'D')
 		return (0);
 	else if (game->map.map_array[game->pcoords.y + 1][game->pcoords.x] == 'E'
 		&& game->map.collectibles != 0)
@@ -68,7 +70,8 @@ int	move_down(t_game *game)
 
 int	move_right(t_game *game)
 {
-	if (game->map.map_array[game->pcoords.y][game->pcoords.x + 1] == '1')
+	if (game->map.map_array[game->pcoords.y][game->pcoords.x + 1] == '1' ||
+		game->map.map_array[game->pcoords.y][game->pcoords.x + 1] == 'D')
 		return (0);
 	else if (game->map.map_array[game->pcoords.y][game->pcoords.x + 1] == 'E'
 		&& game->map.collectibles != 0)
@@ -95,7 +98,8 @@ int	move_right(t_game *game)
 
 int	move_left(t_game *game)
 {
-	if (game->map.map_array[game->pcoords.y][game->pcoords.x - 1] == '1')
+	if (game->map.map_array[game->pcoords.y][game->pcoords.x - 1] == '1' ||
+		game->map.map_array[game->pcoords.y][game->pcoords.x - 1] == 'D')
 		return (0);
 	else if (game->map.map_array[game->pcoords.y][game->pcoords.x - 1] == 'E'
 		&& game->map.collectibles != 0)

@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 17:38:29 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 16:03:56 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:34:58 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,9 @@ static void	inizialize_tiles_part_one(t_game *game)
 			&game->graphics.size_tile);
 	game->image.e = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
 			"./images/exit.xpm", &game->graphics.size_tile,
+			&game->graphics.size_tile);
+	game->image.d = mlx_xpm_file_to_image(game->graphics.mlx_pointer,
+			"./images/dead.xpm", &game->graphics.size_tile,
 			&game->graphics.size_tile);
 }
 

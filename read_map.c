@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:53:06 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/09 18:24:29 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/12 18:36:55 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ static void	draw_map(t_game *game, int y, int x)
 		put_exit_img(game, y, x);
 	else if (game->map.map_array[y][x] == 'C')
 		put_c_img(game, y, x);
+	else if (game->map.map_array[y][x] == 'D')
+		put_d_img(game, y, x);
 }
 
 void	scan_map(t_game *game)
