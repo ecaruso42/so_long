@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/16 16:56:13 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/16 19:40:24 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ int	main(int argc, char **argv)
 		game.map.dir = 3;
 		check_ber_ext(argv[1]);
 		create_map(argv[1], &game);
+		initialize_variables(&game);
 		ft_print_array(game.map.map_array);
 		create_window(&game);
 		make_graphics(&game);
@@ -59,4 +60,10 @@ void	win(t_game *game)
 		game->graphics.mlx_window);
 	free_map(game);
 	exit(1);
+}
+
+void	initialize_variables(t_game *game)
+{
+	game->map.loop = 0;
+	game->map.frame = 0;
 }
