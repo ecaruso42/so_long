@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:21:30 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/12 18:36:15 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/16 16:52:28 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ typedef struct s_map
 {
 	char	*map_str;
 	char	**map_array;
+	char	**array_copy;
 	int		map_height;
 	int		map_width;
 	int		collectibles;
@@ -101,4 +102,9 @@ void	stab_l(t_game *game);
 void	stab_d(t_game *game);
 void	stab_u(t_game *game);
 void	put_d_img(t_game *game, int y, int x);
+int		key_x(t_game *game);
+void	display_moves(t_game *game);
+void	enemy_movement(t_game *game);
+int		animation(t_game *game);
+
 #endif

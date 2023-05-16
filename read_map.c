@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 16:53:06 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/12 18:36:55 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/15 20:12:14 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ void	create_map(char *argv, t_game *game)
 	read(fd, game->map.map_str, BUFFER_SIZE);
 	game->map.map_height = array_height(game->map.map_str, '\n') + 1;
 	game->map.map_array = ft_split(game->map.map_str, '\n');
+	game->map.array_copy = ft_split(game->map.map_str, '\n');
 	game->map.map_width = ft_strlen(game->map.map_array[0]);
 	check_errors(game);
 	free(game->map.map_str);
@@ -65,6 +66,7 @@ void	scan_map(t_game *game)
 			x++;
 		}
 		y++;
+		display_moves(game);
 	}
 }
 
@@ -78,4 +80,21 @@ void	free_map(t_game *game)
 		free(game->map.map_array[i]);
 		i++;
 	}
+	while (game->map.array_copy[i])
+	{
+		free(game->map.array_copy[i]);
+		i++;
+	}
+}
+
+void	display_moves(t_game *game)
+{
+	char	*s_moves;
+
+	s_moves = ft_itoa(game->map.moves);
+	mlx_string_put(game->graphics.mlx_pointer, game->graphics.mlx_window,
+		16, 16, 0xFFFFFF, "Moves:");
+	mlx_string_put(game->graphics.mlx_pointer, game->graphics.mlx_window,
+		80, 16, 0xFFFFFF, s_moves);
+	free(s_moves);
 }
