@@ -6,13 +6,13 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 19:18:02 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/16 20:00:18 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/17 17:46:21 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
-void	move_N_up(t_game *game, int y, int x)
+void	move_n_up(t_game *game, int y, int x)
 {
 	if (game->map.map_array[y - 1][x] == '0')
 	{
@@ -23,7 +23,7 @@ void	move_N_up(t_game *game, int y, int x)
 		death(game);
 }
 
-void	move_N_down(t_game *game, int y, int x)
+void	move_n_down(t_game *game, int y, int x)
 {
 	if (game->map.map_array[y + 1][x] == '0')
 	{
@@ -34,7 +34,7 @@ void	move_N_down(t_game *game, int y, int x)
 		death(game);
 }
 
-void	move_N_left(t_game *game, int y, int x)
+void	move_n_left(t_game *game, int y, int x)
 {
 	if (game->map.map_array[y][x - 1] == '0')
 	{
@@ -45,7 +45,7 @@ void	move_N_left(t_game *game, int y, int x)
 		death(game);
 }
 
-void	move_N_right(t_game *game, int y, int x)
+void	move_n_right(t_game *game, int y, int x)
 {
 	if (game->map.map_array[y][x + 1] == '0')
 	{
@@ -70,13 +70,13 @@ void	enemy_movement(t_game *game)
 			if (game->map.map_array[y][x] == 'N')
 			{
 				if (y > game->pcoords.y)
-					move_N_up(game, y, x);
+					move_n_up(game, y, x);
 				else if (y < game->pcoords.y)
-					move_N_down(game, y, x);
+					move_n_down(game, y, x);
 				else if (x > game->pcoords.x)
-					move_N_left(game, y, x);
+					move_n_left(game, y, x);
 				else if (x < game->pcoords.x)
-					move_N_right(game, y, x);
+					move_n_right(game, y, x);
 			}
 			x++;
 		}

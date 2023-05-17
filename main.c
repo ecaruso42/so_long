@@ -6,7 +6,7 @@
 /*   By: ecaruso <ecaruso@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:23:21 by ecaruso           #+#    #+#             */
-/*   Updated: 2023/05/16 19:40:24 by ecaruso          ###   ########.fr       */
+/*   Updated: 2023/05/17 17:46:37 by ecaruso          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,12 @@ int	main(int argc, char **argv)
 	}
 	return (0);
 }
+
 int	key_x(t_game *game)
 {
 	free_map(game);
 	exit(0);
-	return(0);
+	return (0);
 }
 
 void	death(t_game *game)
